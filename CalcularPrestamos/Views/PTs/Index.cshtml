@@ -1,0 +1,63 @@
+﻿@model IEnumerable<CalcularPrestamos.Models.PT>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Inicio Prestamos</h2>
+
+<p>
+    @Html.ActionLink("Agregar Nuevo ", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CI.Nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Monto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Interes)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Plazo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cuota)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaInicioPrestamo)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CI.Nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Monto)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Interes)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Plazo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cuota)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FechaInicioPrestamo)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Detalles", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Borrar", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

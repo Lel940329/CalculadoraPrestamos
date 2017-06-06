@@ -1,0 +1,66 @@
+﻿@model CalcularPrestamos.Models.PT
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Detalles</h2>
+
+<div>
+    <h4>Prestamos</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CI.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CI.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Monto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Monto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Interes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Interes)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Plazo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Plazo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cuota)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cuota)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaInicioPrestamo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaInicioPrestamo)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Volver a la lista", "Index")
+</p>
